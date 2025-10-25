@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Niche|AGC|Products</title>
+  <script src="links.js"></script>
+</head>
+<body>
+  <h2>Your products will be opened in new tabs...</h2>
+
+  <script>
+    window.onload = function() {
+      const batchNumber = 6; // change for each batch
+      const batchSize = 41;
+      const start = (batchNumber - 1) * batchSize;
+      const end = start + batchSize;
+      const links = allLinks.slice(start, end);
+
+      if (links.length === 0) {
+        alert("No links found for this batch!");
+        return;
+      }
+
+      const openedTabs = [];
+
+      // open all in new tabs
+      links.forEach(link => {
+        const tab = window.open(link, "_blank");
+        if (tab) openedTabs.push(tab);
+      });
+
+      // focus the first tab after slight delay
+      setTimeout(() => {
+        if (openedTabs[0]) openedTabs[0].focus();
+      }, 1000);
+    };
+  </script>
+</body>
+</html>

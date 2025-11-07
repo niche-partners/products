@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Niche|AGC|Products</title>
+</head>
+<body>
+  <h2>Your products will be opened in new tabs...</h2>
+
+  <script>
+    window.onload = function() {
+      const links = ["https://www.amazon.sa/d/B08M49KDBW ", "https://www.amazon.sa/d/B08X4YSYKT ", "https://www.amazon.sa/d/B0CJCB72GS ", "https://www.amazon.sa/d/B0CNS2RZYC ", "https://www.amazon.sa/d/B0CXXDCD64 ", "https://www.amazon.sa/d/B0CXXLVQBT ", "https://www.amazon.sa/d/B0CYH7QG1L ", "https://www.amazon.sa/d/B0CYTF4739 ", "https://www.amazon.sa/d/B0CYWFHQBG ", "https://www.amazon.sa/d/B0CYWNGC2S ", "https://www.amazon.sa/d/B0CYWNJ8FK ", "https://www.amazon.sa/d/B0CYWQFQX1 ", "https://www.amazon.sa/d/B0CYWQGWNL ", "https://www.amazon.sa/d/B0CYWTYK14 ", "https://www.amazon.sa/d/B0CYWXS278 ", "https://www.amazon.sa/d/B0D11H8SP8 ", "https://www.amazon.sa/d/B0D11QCMZ5 ", "https://www.amazon.sa/d/B0D11QJ312 ", "https://www.amazon.sa/d/B0D11RTKYY ", "https://www.amazon.sa/d/B0D2L9BZ9C ", "https://www.amazon.sa/d/B0D2L9F9V6 ", "https://www.amazon.sa/d/B0D2LB6DJD ", "https://www.amazon.sa/d/B0D2LBDYSG ", "https://www.amazon.sa/d/B0D2LBRN3H ", "https://www.amazon.sa/d/B0D2LF3CQ3 ", "https://www.amazon.sa/d/B0D2LF5T9Z ", "https://www.amazon.sa/d/B0D3HVJDKK ", "https://www.amazon.sa/d/B0D3HW7X5D ", "https://www.amazon.sa/d/B0D56PNJXH ", "https://www.amazon.sa/d/B0D56R5NPR ", "https://www.amazon.sa/d/B0D56TMJY5 ", "https://www.amazon.sa/d/B0D7HNC36Q ", "https://www.amazon.sa/d/B0DF579L76 ", "https://www.amazon.sa/d/B0DF57RFLS ", "https://www.amazon.sa/d/B0DF58P94C ", "https://www.amazon.sa/d/B0DF59G6YD ", "https://www.amazon.sa/d/B0DF5C58JT ", "https://www.amazon.sa/d/B0DF5GM5PH ", "https://www.amazon.sa/d/B0DNMYF6HZ ", "https://www.amazon.sa/d/B0DNMZ3SL2"];
+
+      const openedTabs = [];
+
+      // open all in new tabs
+      links.forEach(link => {
+        const tab = window.open(link, "_blank");
+        if (tab) openedTabs.push(tab);
+      });
+
+      // focus the first tab after slight delay
+      setTimeout(() => {
+        if (openedTabs[0]) openedTabs[0].focus();
+      }, 1000);
+    };
+  </script>
+</body>
+</html>

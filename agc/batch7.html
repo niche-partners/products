@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Niche|AGC|Products</title>
+  <script src="links.js"></script>
+</head>
+<body>
+  <h2>Your products will be opened in new tabs...</h2>
+
+  <script>
+    window.onload = function() {
+      
+      const links = ["https://www.amazon.sa/d/B0D3L3YJ8Q",
+"https://www.amazon.sa/d/B0CYH7QG1L",
+"https://www.amazon.sa/d/B0D3L326WD",
+"https://www.amazon.sa/d/B0D3HW7X5D",
+"https://www.amazon.sa/d/B0D3HVJDKK",
+"https://www.amazon.sa/d/B08M49KDBW",
+"https://www.amazon.sa/d/B0D11H8SP8",
+"https://www.amazon.sa/d/B0D11QJ312",
+"https://www.amazon.sa/d/B0D11RTKYY",
+"https://www.amazon.sa/d/B0D11QCMZ5",
+"https://www.amazon.sa/d/B0D56PNJXH",
+"https://www.amazon.sa/d/B0D56TMJY5",
+"https://www.amazon.sa/d/B0D56SQ6JM",
+"https://www.amazon.sa/d/B0D56R5NPR",
+"https://www.amazon.sa/d/B0D56VR5G4",
+"https://www.amazon.sa/d/B0D56P65JG",
+"https://www.amazon.sa/d/B0D56Q4GF2",
+"https://www.amazon.sa/d/B0D56QT7SG",
+"https://www.amazon.sa/d/B0D56P3VNS",
+"https://www.amazon.sa/d/B0CXXMD6C9",
+"https://www.amazon.sa/d/B0CXX7C37B",
+"https://www.amazon.sa/d/B0CXXHQNKP",
+"https://www.amazon.sa/d/B0CXX9RL9G",
+"https://www.amazon.sa/d/B0CXXH4HB2",
+"https://www.amazon.sa/d/B0CXXLVQBT",
+"https://www.amazon.sa/d/B0CXXDCD64",
+"https://www.amazon.sa/d/B0CXXBQR8F",
+"https://www.amazon.sa/d/B0CYWQGWNL",
+"https://www.amazon.sa/d/B0CYWFHQBG",
+"https://www.amazon.sa/d/B0CYWXS278",
+"https://www.amazon.sa/d/B0CYWQFQX1",
+"https://www.amazon.sa/d/B0CYWTYK14",
+"https://www.amazon.sa/d/B0CYWNGC2S",
+"https://www.amazon.sa/d/B0CYWNJ8FK",
+"https://www.amazon.sa/d/B0D2L9F9V6",
+"https://www.amazon.sa/d/B0D2L9BZ9C",
+"https://www.amazon.sa/d/B0D2LB6DJD",
+"https://www.amazon.sa/d/B0D2LF3CQ3",
+"https://www.amazon.sa/d/B0D2LBDYSG",
+"https://www.amazon.sa/d/B0D2LF5T9Z",
+"https://www.amazon.sa/d/B0D2LBRN3H",
+"https://www.amazon.sa/d/B0D2LF5T9Z -> B0D2LB3BSN",
+"https://www.amazon.sa/d/B08X4YSYKT",
+"https://www.amazon.sa/d/B0CYTF4739",
+"https://www.amazon.sa/d/B0CJCB72GS",
+"https://www.amazon.sa/d/B0CNS2RZYC",
+"https://www.amazon.sa/d/B0CZ91WPLD",
+"https://www.amazon.sa/d/B0CZ9234B7",
+"https://www.amazon.sa/d/B0CZ8Z2Q9C",
+"https://www.amazon.sa/d/B0CXM7Z8GZ",
+"https://www.amazon.sa/d/B0D17YR8CC",
+"https://www.amazon.sa/d/B0DF58P94C",
+"https://www.amazon.sa/d/B0DF579L76",
+"https://www.amazon.sa/d/B0DF59GB1G",
+"https://www.amazon.sa/d/B0DF5GM5PH",
+"https://www.amazon.sa/d/B0D7HR86XD",
+"https://www.amazon.sa/d/B0DF5JM48X",
+"https://www.amazon.sa/d/B0DF5K93BL",
+"https://www.amazon.sa/d/B0D7HNC36Q",
+"https://www.amazon.sa/d/B0DF5B5ZPF",
+"https://www.amazon.sa/d/B0DNMXGLJM",
+"https://www.amazon.sa/d/B0DF57BF1L",
+"https://www.amazon.sa/d/B0DF59G6YD",
+"https://www.amazon.sa/d/B0DF5C58JT",
+"https://www.amazon.sa/d/B0DF56NT8P",
+"https://www.amazon.sa/d/B0DF57RFLS",
+"https://www.amazon.sa/d/B0DNMTQKK1",
+"https://www.amazon.sa/d/B0DNMXH4Z9",
+"https://www.amazon.sa/d/B0DNMYF6HZ",
+"https://www.amazon.sa/d/B0DNMX2VVG",
+"https://www.amazon.sa/d/B0DNMZ3SL2"];
+
+      if (links.length === 0) {
+        alert("No links found for this batch!");
+        return;
+      }
+
+      const openedTabs = [];
+
+      // open all in new tabs
+      links.forEach(link => {
+        const tab = window.open(link, "_blank");
+        if (tab) openedTabs.push(tab);
+      });
+
+      // focus the first tab after slight delay
+      setTimeout(() => {
+        if (openedTabs[0]) openedTabs[0].focus();
+      }, 1000);
+    };
+  </script>
+</body>
+</html>

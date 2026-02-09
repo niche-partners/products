@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Niche|HIKOKI|Products</title>
+</head>
+<body>
+  <h2>Your products will be opened in new tabs...</h2>
+
+  <script>
+    window.onload = function() {
+      const links = [
+        "https://www.amazon.sa/d/B0D2W8BPG8",
+        "https://www.amazon.sa/d/B08545P73G",
+        "https://www.amazon.sa/d/B084519GV4",
+        "https://www.amazon.sa/d/B0D2W79F5M",
+        "https://www.amazon.sa/d/B0871TYL88",
+        "https://www.amazon.sa/d/B0D2W89ZQW",
+        "https://www.amazon.sa/d/B0872Z4XNF",
+        "https://www.amazon.sa/d/B07HL2XRQ6",
+        "https://www.amazon.sa/d/B07HNS44XB",
+        "https://www.amazon.sa/d/B0G1Z85LL3",
+        "https://www.amazon.sa/d/B0G2MLS7FT",
+        "https://www.amazon.sa/d/B0G2MNRDDG",
+        "https://www.amazon.sa/d/B0G1Z92MMZ",
+        "https://www.amazon.sa/d/B0G1D4NCK5",
+        "https://www.amazon.sa/d/B0871T34KY",
+        "https://www.amazon.sa/d/B0G1Z7HCGQ",
+        "https://www.amazon.sa/d/B0G1ZBCV24",
+        "https://www.amazon.sa/d/B0G1Z8X1CY",
+        "https://www.amazon.sa/d/B0G1Z75WCD",
+        "https://www.amazon.sa/d/B0G7ZX5B1R",
+        "https://www.amazon.sa/d/B0G81KN3P9",
+        "https://www.amazon.sa/d/B0G82BQ41D",
+        "https://www.amazon.sa/d/B0C8ZLDMP7",
+        "https://www.amazon.sa/d/B0G83RJX3Y",
+        "https://www.amazon.sa/d/B0G84424ZN",
+        "https://www.amazon.sa/d/B0G876DL44",
+        "https://www.amazon.sa/d/B0G841832H",
+        "https://www.amazon.sa/d/B0G83H4QP1",
+        "https://www.amazon.sa/d/B0C5HR4V8F",
+        "https://www.amazon.sa/d/B0G83YSJZ4",
+        "https://www.amazon.sa/d/B0G88D21SQ",
+        "https://www.amazon.sa/d/B0G83ZQVTR",
+        "https://www.amazon.sa/d/B0G84QX5C5",
+        "https://www.amazon.sa/d/B0G84NMML8",
+        "https://www.amazon.sa/d/B0G83SKF3P",
+        "https://www.amazon.sa/d/B0G84DVW9T",
+        "https://www.amazon.sa/d/B0G849X8QP",
+        "https://www.amazon.sa/d/B0G8674NNQ"
+      ];
+
+      if (links.length === 0) {
+        alert("No links found for this batch!");
+        return;
+      }
+
+      const openedTabs = [];
+
+      // open all in new tabs
+      links.forEach(link => {
+        const tab = window.open(link, "_blank");
+        if (tab) openedTabs.push(tab);
+      });
+
+      // focus the first tab after slight delay
+      setTimeout(() => {
+        if (openedTabs[0]) openedTabs[0].focus();
+      }, 1000);
+    };
+  </script>
+</body>
+</html>

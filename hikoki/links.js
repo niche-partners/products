@@ -24,5 +24,6 @@ const allLinks = [
 		"https://www.amazon.sa/d/B0D2W8R41K",
 		"https://www.amazon.sa/d/B0D2W88CTF",
 		"https://www.amazon.sa/d/B0D2W8DFY6",
-		"https://www.amazon.sa/d/B0871TYL88"
+		"https://www.amazon.sa/d/B0871TYL88",
+		"https://www.amazon.sa/d/B0C3QXCNNK"
 ];

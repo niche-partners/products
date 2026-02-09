@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Niche|AGC|Products</title>
+</head>
+<body>
+  <h2>Your products will be opened in new tabs...</h2>
+
+  <script>
+    window.onload = function() {
+      const links = [ 
+        "https://www.amazon.sa/d/B0G3MJJMJW",
+        "https://www.amazon.sa/d/B0G3MJ379J",
+        "https://www.amazon.sa/d/B0G3MH5P3F",
+        "https://www.amazon.sa/d/B0G3MGHYGK",
+        "https://www.amazon.sa/d/B0G3MHMFKY",
+        "https://www.amazon.sa/d/B0G3MFMXYW",
+        "https://www.amazon.sa/d/B0G3MKDC1G",
+        "https://www.amazon.sa/d/B0G3MJL7K5",
+        "https://www.amazon.sa/d/B0CNS2RZYC",
+        "https://www.amazon.sa/d/B0G4RJW45Z",
+        "https://www.amazon.sa/d/B0CJCB72GS",
+        "https://www.amazon.sa/d/B0G3Q1KT7Y",
+        "https://www.amazon.sa/d/B0G3PZL5C6",
+        "https://www.amazon.sa/d/B0G3Q4SFWJ",
+        "https://www.amazon.sa/d/B0G3PZ6QGP",
+        "https://www.amazon.sa/d/B0D11QJ312",
+        "https://www.amazon.sa/d/B0D11H8SP8",
+        "https://www.amazon.sa/d/B08M49KDBW",
+        "https://www.amazon.sa/d/B0GD214N7Z",
+        "https://www.amazon.sa/d/B0D56R5NPR",
+        "https://www.amazon.sa/d/B0CXXHQNKP",
+        "https://www.amazon.sa/d/B0D56PNJXH",
+        "https://www.amazon.sa/d/B0D56P65JG",
+        "https://www.amazon.sa/d/B0D56VR5G4",
+        "https://www.amazon.sa/d/B0CXX9RL9G",
+        "https://www.amazon.sa/d/B0D56Q4GF2",
+        "https://www.amazon.sa/d/B0D56TMJY5",
+        "https://www.amazon.sa/d/B0CXXDCD64",
+        "https://www.amazon.sa/d/B0CXX7C37B",
+        "https://www.amazon.sa/d/B0D56P3VNS",
+        "https://www.amazon.sa/d/B0CXXMD6C9",
+        "https://www.amazon.sa/d/B0D56QT7SG",
+        "https://www.amazon.sa/d/B0CXXH4HB2",
+        "https://www.amazon.sa/d/B0CXXLVQBT",
+        "https://www.amazon.sa/d/B0CZ8Z2Q9C",
+        "https://www.amazon.sa/d/B0CZ9234B7",
+        "https://www.amazon.sa/d/B0D17YR8CC",
+        "https://www.amazon.sa/d/B0CZ91WPLD",
+        "https://www.amazon.sa/d/B0G3MGJVFW",
+        "https://www.amazon.sa/d/B0G3Q25GJ7",
+        "https://www.amazon.sa/d/B0G3Q25GJ7",
+        "https://www.amazon.sa/d/B0G3PV8LG2"
+      ];
+
+      if (links.length === 0) {
+        alert("No links found for this batch!");
+        return;
+      }
+
+      const openedTabs = [];
+
+      // open all in new tabs
+      links.forEach(link => {
+        const tab = window.open(link, "_blank");
+        if (tab) openedTabs.push(tab);
+      });
+
+      // focus the first tab after slight delay
+      setTimeout(() => {
+        if (openedTabs[0]) openedTabs[0].focus();
+      }, 1000);
+    };
+  </script>
+</body>
+</html>

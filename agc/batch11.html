@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Niche|AGC|Products</title>
+</head>
+<body>
+  <h2>Your products will be opened in new tabs...</h2>
+
+  <script>
+    window.onload = function() {
+      const links = [ 
+        "https://www.amazon.sa/d/B0D7HR86XD",
+        "https://www.amazon.sa/d/B0G3Q15BTS",
+        "https://www.amazon.sa/d/B0G3PZP1CS",
+        "https://www.amazon.sa/d/B0G3Q36Q9Z",
+        "https://www.amazon.sa/d/B0G3PXBL23",
+        "https://www.amazon.sa/d/B0G3Q1K195",
+        "https://www.amazon.sa/d/B0G3PW1V7H",
+        "https://www.amazon.sa/d/B0G3Q16XRX",
+        "https://www.amazon.sa/d/B0G3PZ7DP2",
+        "https://www.amazon.sa/d/B0G3MFC46M",
+        "https://www.amazon.sa/d/B0G3MHMVB2",
+        "https://www.amazon.sa/d/B0G3PYKL5H",
+        "https://www.amazon.sa/d/B0G3PXTHK1",
+        "https://www.amazon.sa/d/B0G3PXW5F5",
+        "https://www.amazon.sa/d/B0G3PYFSZG",
+        "https://www.amazon.sa/d/B0G3PYJ11H",
+        "https://www.amazon.sa/d/B0G3MKDBL3",
+        "https://www.amazon.sa/d/B0G3MG9SMY",
+        "https://www.amazon.sa/d/B0G3MH48T2",
+        "https://www.amazon.sa/d/B0G3MHJK4Q",
+        "https://www.amazon.sa/d/B0G3PXTVL6",
+        "https://www.amazon.sa/d/B0G3Q3P888",
+        "https://www.amazon.sa/d/B0G3PY9G2N",
+        "https://www.amazon.sa/d/B08P3XYLS6",
+        "https://www.amazon.sa/d/B08P3WHFFQ",
+        "https://www.amazon.sa/d/B09N9T496T",
+        "https://www.amazon.sa/d/B09N9SLD2M",
+        "https://www.amazon.sa/d/B09N9TGBJ4",
+        "https://www.amazon.sa/d/B0G3Q1QT6Q",
+        "https://www.amazon.sa/d/B0G3PZ8XWT",
+        "https://www.amazon.sa/d/B0G3PYH42G",
+        "https://www.amazon.sa/d/B0G3PY6ZG8",
+        "https://www.amazon.sa/d/B0G3PZ1X85",
+        "https://www.amazon.sa/d/B0G3P5Y4JW",
+        "https://www.amazon.sa/d/B0G3P69TWX",
+        "https://www.amazon.sa/d/B0DTKKRRLN",
+        "https://www.amazon.sa/d/B0G3MFYDSZ",
+        "https://www.amazon.sa/d/B0G3MJ27M6",
+        "https://www.amazon.sa/d/B0G3MFBBWW",
+        "https://www.amazon.sa/d/B0G3MGCWB3",
+        "https://www.amazon.sa/d/B0G3MH8R6L"
+      ];
+
+      if (links.length === 0) {
+        alert("No links found for this batch!");
+        return;
+      }
+
+      const openedTabs = [];
+
+      // open all in new tabs
+      links.forEach(link => {
+        const tab = window.open(link, "_blank");
+        if (tab) openedTabs.push(tab);
+      });
+
+      // focus the first tab after slight delay
+      setTimeout(() => {
+        if (openedTabs[0]) openedTabs[0].focus();
+      }, 1000);
+    };
+  </script>
+</body>
+</html>

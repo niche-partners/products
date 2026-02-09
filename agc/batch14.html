@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Niche|AGC|Products</title>
+</head>
+<body>
+  <h2>Your products will be opened in new tabs...</h2>
+
+  <script>
+    window.onload = function() {
+      const links = [ 
+        "https://www.amazon.sa/d/B0DF5GM5PH",
+        "https://www.amazon.sa/d/B0DF57BF1L",
+        "https://www.amazon.sa/d/B0DNMX2VVG",
+        "https://www.amazon.sa/d/B0DF56NT8P",
+        "https://www.amazon.sa/d/B0C6JWQV7X",
+        "https://www.amazon.sa/d/B0C6H2CFQS",
+        "https://www.amazon.sa/d/B0G3PN4MPL",
+        "https://www.amazon.sa/d/B0D9H8Y1YV",
+        "https://www.amazon.sa/d/B0CHMWX2FS",
+        "https://www.amazon.sa/d/B0GD6RVYLM",
+        "https://www.amazon.sa/d/B0GD6DMLFN",
+        "https://www.amazon.sa/d/B0CYWNGC2S",
+        "https://www.amazon.sa/d/B0CYWFHQBG",
+        "https://www.amazon.sa/d/B0CYTF4739",
+        "https://www.amazon.sa/d/B0D2LB6DJD",
+        "https://www.amazon.sa/d/B0D2L9BZ9C",
+        "https://www.amazon.sa/d/B0CYWXS278",
+        "https://www.amazon.sa/d/B0CYWNJ8FK",
+        "https://www.amazon.sa/d/B0D2LBDYSG",
+        "https://www.amazon.sa/d/B0CYWTYK14",
+        "https://www.amazon.sa/d/B0D2LBRN3H",
+        "https://www.amazon.sa/d/B0G3MKDTQH",
+        "https://www.amazon.sa/d/B08X4YSYKT",
+        "https://www.amazon.sa/d/B0DTKHHH6R",
+        "https://www.amazon.sa/d/B0DTP9P91M",
+        "https://www.amazon.sa/d/B0DTQ19XPG",
+        "https://www.amazon.sa/d/B0G3MGF4G7",
+        "https://www.amazon.sa/d/B0GD6YPJYF",
+        "https://www.amazon.sa/d/B0GD6P9ND4",
+        "https://www.amazon.sa/d/B0GD6T9VLR",
+        "https://www.amazon.sa/d/B0GD6TR1VK",
+        "https://www.amazon.sa/d/B0DTK3YBT8",
+        "https://www.amazon.sa/d/B0G3Q13RMN",
+        "https://www.amazon.sa/d/B0G3Q1FRRF"
+      ];
+
+      if (links.length === 0) {
+        alert("No links found for this batch!");
+        return;
+      }
+
+      const openedTabs = [];
+
+      // open all in new tabs
+      links.forEach(link => {
+        const tab = window.open(link, "_blank");
+        if (tab) openedTabs.push(tab);
+      });
+
+      // focus the first tab after slight delay
+      setTimeout(() => {
+        if (openedTabs[0]) openedTabs[0].focus();
+      }, 1000);
+    };
+  </script>
+</body>
+</html>

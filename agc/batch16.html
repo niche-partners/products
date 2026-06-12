@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Niche|AGC|Products</title>
+</head>
+<body>
+  <h2>Your products will be opened in new tabs...</h2>
+
+  <script>
+    window.onload = function() {
+    	const links = [
+				"https://www.amazon.sa/d/B0GQ8WMWLR",
+				"https://www.amazon.sa/d/B0GQ9CVKQ4",
+				"https://www.amazon.sa/d/B0GQ8XC7VC",
+				"https://www.amazon.sa/d/B0GQ8P2RG7",
+				"https://www.amazon.sa/d/B0GQ8Y4WRZ",
+				"https://www.amazon.sa/d/B0GQ9FYZ4C",
+				"https://www.amazon.sa/d/B0GQ8X7TMP",
+				"https://www.amazon.sa/d/B0GQ9FSDHJ",
+				"https://www.amazon.sa/d/B0GQ8NVV3P",
+				"https://www.amazon.sa/d/B0GQ95JKVV",
+				"https://www.amazon.sa/d/B0G3PV8LG2",
+				"https://www.amazon.sa/d/B0CY879Q6N",
+				"https://www.amazon.sa/d/B0GQ99RKFP",
+				"https://www.amazon.sa/d/B0GQ8SSWZH",
+				"https://www.amazon.sa/d/B0GQ91X59X",
+				"https://www.amazon.sa/d/B0GQ98KC4N",
+				"https://www.amazon.sa/d/B0GQ8YGXXV",
+				"https://www.amazon.sa/d/B0GQ8WP7GL",
+				"https://www.amazon.sa/d/B0GQ95R6RV",
+				"https://www.amazon.sa/d/B0D91ZXDZ3",
+				"https://www.amazon.sa/d/B0GQ913H4G",
+				"https://www.amazon.sa/d/B0D921ZZ7G",
+				"https://www.amazon.sa/d/B0DNB2LVJD",
+				"https://www.amazon.sa/d/B0G3Q36L6V",
+				"https://www.amazon.sa/d/B0DQL8S2FS",
+				"https://www.amazon.sa/d/B0DQL9WYHZ",
+				"https://www.amazon.sa/d/B0DQLCS7KC",
+				"https://www.amazon.sa/d/B0FF54ZVJX",
+				"https://www.amazon.sa/d/B0FF4YZ2M9",
+				"https://www.amazon.sa/d/B0DQLB42BC",
+				"https://www.amazon.sa/d/B0FF4VTNZ3",
+				"https://www.amazon.sa/d/B0DQLC6W8S",
+				"https://www.amazon.sa/d/B0FF5338M3",
+				"https://www.amazon.sa/d/B0FF4Z7753",
+				"https://www.amazon.sa/d/B0D91YH35V",
+				"https://www.amazon.sa/d/B0FF4VSZ59",
+				"https://www.amazon.sa/d/B0GWMBG9S4",
+				"https://www.amazon.sa/d/B0GWLZMLS7",
+				"https://www.amazon.sa/d/B0GWM6RT5H",
+				"https://www.amazon.sa/d/B0GWMBV6NP",
+				"https://www.amazon.sa/d/B0GWMBY7NY"
+			];
+
+      if (links.length === 0) {
+        alert("No links found for this batch!");
+        return;
+      }
+
+      const openedTabs = [];
+
+      // open all in new tabs
+      links.forEach(link => {
+        const tab = window.open(link, "_blank");
+        if (tab) openedTabs.push(tab);
+      });
+
+      // focus the first tab after slight delay
+      setTimeout(() => {
+        if (openedTabs[0]) openedTabs[0].focus();
+      }, 1000);
+    };
+  </script>
+</body>
+</html>

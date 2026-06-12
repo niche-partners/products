@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Niche|AGC|Products</title>
+</head>
+<body>
+  <h2>Your products will be opened in new tabs...</h2>
+
+  <script>
+    window.onload = function() {
+    	const links = [
+				"https://www.amazon.sa/d/B0G3PYKLPC",
+				"https://www.amazon.sa/d/B0GWMDGQT1",
+				"https://www.amazon.sa/d/B0GWM8TQV7",
+				"https://www.amazon.sa/d/B0G3Q1H8WX",
+				"https://www.amazon.sa/d/B0G3Q4Y1ZL",
+				"https://www.amazon.sa/d/B0G3PZLGLJ",
+				"https://www.amazon.sa/d/B0G3PXSLZ1",
+				"https://www.amazon.sa/d/B0G3PYZK56",
+				"https://www.amazon.sa/d/B0G3Q1TRQF",
+				"https://www.amazon.sa/d/B0G3Q3PJV7",
+				"https://www.amazon.sa/d/B0G3P9ZNPZ",
+				"https://www.amazon.sa/d/B0GWM2WCXN",
+				"https://www.amazon.sa/d/B0G3PX27BD",
+				"https://www.amazon.sa/d/B0GWMBKZ6S",
+				"https://www.amazon.sa/d/B0G3Q4S6B6",
+				"https://www.amazon.sa/d/B0G3Q2HJK9",
+				"https://www.amazon.sa/d/B0GWM4Y94V",
+				"https://www.amazon.sa/d/B0G3PZZKCM",
+				"https://www.amazon.sa/d/B0GWMLG1W8",
+				"https://www.amazon.sa/d/B0GWMLJ5RR",
+				"https://www.amazon.sa/d/B0GWM85Q5X",
+				"https://www.amazon.sa/d/B0G3Q8DPVL",
+				"https://www.amazon.sa/d/B0GWM8PHN6",
+				"https://www.amazon.sa/d/B0G3Q2GM8D"
+			];
+
+      if (links.length === 0) {
+        alert("No links found for this batch!");
+        return;
+      }
+
+      const openedTabs = [];
+
+      // open all in new tabs
+      links.forEach(link => {
+        const tab = window.open(link, "_blank");
+        if (tab) openedTabs.push(tab);
+      });
+
+      // focus the first tab after slight delay
+      setTimeout(() => {
+        if (openedTabs[0]) openedTabs[0].focus();
+      }, 1000);
+    };
+  </script>
+</body>
+</html>

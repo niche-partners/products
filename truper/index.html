@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Niche|HIKOKI|Products</title>
+</head>
+<body>
+  <h2>Your products will be opened in new tabs...</h2>
+
+  <script>
+    window.onload = function() {
+      const batchNumber = 1; // change for each batch
+      const batchSize = 40;
+      const start = (batchNumber - 1) * batchSize;
+      const end = start + batchSize;
+      const links = ["https://www.amazon.sa/d/B0CSPS7K8C",
+  "https://www.amazon.sa/d/B0CSPR8LDN",
+  "https://www.amazon.sa/d/B00UY24GL8",
+  "https://www.amazon.sa/d/B00UY25F5O",
+  "https://www.amazon.sa/d/B00UY1QLOY",
+  "https://www.amazon.sa/d/B00UY1WF9O",
+  "https://www.amazon.sa/d/B00UY1YABU",
+  "https://www.amazon.sa/d/B00UY1Y6W8",
+  "https://www.amazon.sa/d/B00UY1Y8QM",
+  "https://www.amazon.sa/d/B00UY1W4WM",
+  "https://www.amazon.sa/d/B00UY25WHU",
+  "https://www.amazon.sa/d/B00UY25VAI",
+  "https://www.amazon.sa/d/B00UY26576",
+  "https://www.amazon.sa/d/B00UY25UAE",
+  "https://www.amazon.sa/d/B00UY1WH3S",
+  "https://www.amazon.sa/d/B00UY23MY0",
+  "https://www.amazon.sa/d/B00UY25T7I",
+  "https://www.amazon.sa/d/B00UY1ZVUE",
+  "https://www.amazon.sa/d/B00UY23M2W",
+  "https://www.amazon.sa/d/B00UY28N3K",
+  "https://www.amazon.sa/d/B00UY1YZRO",
+  "https://www.amazon.sa/d/B00UY28RAO",
+  "https://www.amazon.sa/d/B00UY1VB4Y",
+  "https://www.amazon.sa/d/B00UY1VE46",
+  "https://www.amazon.sa/d/B00UY1SFI4",
+  "https://www.amazon.sa/d/B00UY1SGV0",
+  "https://www.amazon.sa/d/B00UY1SI4A",
+  "https://www.amazon.sa/d/B00UY1SJK8",
+  "https://www.amazon.sa/d/B00UY1RQJI",
+  "https://www.amazon.sa/d/B09JHZMNZT",
+  "https://www.amazon.sa/d/B00UY2AXLA",
+  "https://www.amazon.sa/d/B09JHV38WW",
+  "https://www.amazon.sa/d/B00UY2AZ6S"
+        
+      ];
+
+      if (links.length === 0) {
+        alert("No links found for this batch!");
+        return;
+      }
+
+      const openedTabs = [];
+
+      // open all in new tabs
+      links.forEach(link => {
+        const tab = window.open(link, "_blank");
+        if (tab) openedTabs.push(tab);
+      });
+
+      // focus the first tab after slight delay
+      setTimeout(() => {
+        if (openedTabs[0]) openedTabs[0].focus();
+      }, 1000);
+    };
+  </script>
+</body>
+</html>

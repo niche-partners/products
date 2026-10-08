@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Niche|HIKOKI|Products</title>
+</head>
+<body>
+  <h2>Your products will be opened in new tabs...</h2>
+
+  <script>
+    window.onload = function() {
+      const links = [
+       "https://www.amazon.sa/d/B01HMMM97K",
+  "https://www.amazon.sa/d/B01HMMM9AM",
+  "https://www.amazon.sa/d/B06VVP2WPW",
+  "https://www.amazon.sa/d/B06W55DB12",
+  "https://www.amazon.sa/d/B06W9J9RB3",
+  "https://www.amazon.sa/d/B06WD53Z8K",
+  "https://www.amazon.sa/d/B06X6HZNZD",
+  "https://www.amazon.sa/d/B07NSMBTZG",
+  "https://www.amazon.sa/d/B084YYRYYF",
+  "https://www.amazon.sa/d/B084Z5W1CB",
+  "https://www.amazon.sa/d/B09ZN6XG3P",
+  "https://www.amazon.sa/d/B0B6LZGV4Z",
+  "https://www.amazon.sa/d/B00UY2BIEG",
+  "https://www.amazon.sa/d/B00UY2BHM4",
+  "https://www.amazon.sa/d/B00UY28UEC",
+  "https://www.amazon.sa/d/B00UY28WHW",
+  "https://www.amazon.sa/d/B00UY1T10K",
+  "https://www.amazon.sa/d/B084Z55CDH",
+  "https://www.amazon.sa/d/B00UY215ZI"
+      ];
+
+      if (links.length === 0) {
+        alert("No links found for this batch!");
+        return;
+      }
+
+      const openedTabs = [];
+
+      // open all in new tabs
+      links.forEach(link => {
+        const tab = window.open(link, "_blank");
+        if (tab) openedTabs.push(tab);
+      });
+
+      // focus the first tab after slight delay
+      setTimeout(() => {
+        if (openedTabs[0]) openedTabs[0].focus();
+      }, 1000);
+    };
+  </script>
+</body>
+</html>

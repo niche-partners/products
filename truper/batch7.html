@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Niche|HIKOKI|Products</title>
+</head>
+<body>
+  <h2>Your products will be opened in new tabs...</h2>
+
+  <script>
+    window.onload = function() {
+      const links = [
+       "https://www.amazon.sa/d/B013R197OS",
+  "https://www.amazon.sa/d/B013R19D6A",
+  "https://www.amazon.sa/d/B013R1Q39K",
+  "https://www.amazon.sa/d/B00UY23L0U",
+  "https://www.amazon.sa/d/B00UY20ZYA",
+  "https://www.amazon.sa/d/B00UY2926M",
+  "https://www.amazon.sa/d/B00UY20BMG",
+  "https://www.amazon.sa/d/B00UY1WRJM",
+  "https://www.amazon.sa/d/B07Q3ZWPB2",
+  "https://www.amazon.sa/d/B07Q3YD7YF",
+  "https://www.amazon.sa/d/B00UY23Z88",
+  "https://www.amazon.sa/d/B00UY1YNJE",
+  "https://www.amazon.sa/d/B096T61LZD",
+  "https://www.amazon.sa/d/B09JJ1D9L4",
+  "https://www.amazon.sa/d/B0HCVQQWCS",
+  "https://www.amazon.sa/d/B0HCVG245J",
+  "https://www.amazon.sa/d/B0HCVM2GRV",
+  "https://www.amazon.sa/d/B0DCDZ4K2R",
+  "https://www.amazon.sa/d/B0DCDLD612",
+  "https://www.amazon.sa/d/B0DCDYMN66",
+  "https://www.amazon.sa/d/B0DCD94TN5",
+  "https://www.amazon.sa/d/B0BMMWJ9LN",
+  "https://www.amazon.sa/d/B0DCDGWV79",
+  "https://www.amazon.sa/d/B0DCF5H9YL",
+  "https://www.amazon.sa/d/B0BJ5SDYJ7",
+  "https://www.amazon.sa/d/B0C2RK1MR6",
+  "https://www.amazon.sa/d/B0D81PF1T1",
+  "https://www.amazon.sa/d/B013R154DG",
+  "https://www.amazon.sa/d/B013R2EH7Y",
+  "https://www.amazon.sa/d/B013R2EHBU",
+  "https://www.amazon.sa/d/B015JDGA88",
+  "https://www.amazon.sa/d/B0193VDBPM",
+  "https://www.amazon.sa/d/B01EKL2CHS",
+  "https://www.amazon.sa/d/B01HMMM95W",
+      ];
+
+      if (links.length === 0) {
+        alert("No links found for this batch!");
+        return;
+      }
+
+      const openedTabs = [];
+
+      // open all in new tabs
+      links.forEach(link => {
+        const tab = window.open(link, "_blank");
+        if (tab) openedTabs.push(tab);
+      });
+
+      // focus the first tab after slight delay
+      setTimeout(() => {
+        if (openedTabs[0]) openedTabs[0].focus();
+      }, 1000);
+    };
+  </script>
+</body>
+</html>

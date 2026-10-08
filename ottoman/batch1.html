@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Niche|HIKOKI|Products</title>
+</head>
+<body>
+  <h2>Your products will be opened in new tabs...</h2>
+
+  <script>
+    window.onload = function() {
+      const links = [
+        "https://www.amazon.sa/d/B0CJLFB1RW",
+        "https://www.amazon.sa/d/B0CJLFPZ4G",
+        "https://www.amazon.sa/d/B0CJLBX7XB",
+        "https://www.amazon.sa/d/B0CJLDS677",
+        "https://www.amazon.sa/d/B0CJL3SFMK",
+        "https://www.amazon.sa/d/B0CJLN4GFZ",
+        "https://www.amazon.sa/d/B0CJLLSJWD",
+        "https://www.amazon.sa/d/B0CJL7TYVC",
+        "https://www.amazon.sa/d/B0CJLPJ9CB",
+        "https://www.amazon.sa/d/B0CJLL5BMQ",
+        "https://www.amazon.sa/d/B0CJLL6RBH",
+        "https://www.amazon.sa/d/B0CJL7BPQL",
+        "https://www.amazon.sa/d/B0CJKV4KDM",
+        "https://www.amazon.sa/d/B0CJKV6BWK",
+        "https://www.amazon.sa/d/B0CJLBJDWW",
+        "https://www.amazon.sa/d/B0CJLB1R86",
+        "https://www.amazon.sa/d/B0CJL2W7XG",
+        "https://www.amazon.sa/d/B0CJL7MP9T",
+        "https://www.amazon.sa/d/B0CJLB4HXV",
+        "https://www.amazon.sa/d/B0CJL413K7",
+        "https://www.amazon.sa/d/B0CJM1BH7Q",
+        "https://www.amazon.sa/d/B0CGNF67GV",
+        "https://www.amazon.sa/d/B0CGNHTP86",
+        "https://www.amazon.sa/d/B0CGNG68Y6",
+        "https://www.amazon.sa/d/B0CGNJ7L15",
+        "https://www.amazon.sa/d/B0CGNGXL7V",
+        "https://www.amazon.sa/d/B0CGNGMTMF",
+        "https://www.amazon.sa/d/B0CGNGGZZ6",
+        "https://www.amazon.sa/d/B0CGNHF9Q4"
+      ];
+
+      if (links.length === 0) {
+        alert("No links found for this batch!");
+        return;
+      }
+
+      const openedTabs = [];
+
+      // open all in new tabs
+      links.forEach(link => {
+        const tab = window.open(link, "_blank");
+        if (tab) openedTabs.push(tab);
+      });
+
+      // focus the first tab after slight delay
+      setTimeout(() => {
+        if (openedTabs[0]) openedTabs[0].focus();
+      }, 1000);
+    };
+  </script>
+</body>
+</html>
